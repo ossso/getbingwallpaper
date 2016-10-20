@@ -1,0 +1,16 @@
+{
+  "name": "getBingWallpaper",
+  "version": "1.0.0",
+  "description": "/config/ini.js 基本配置",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "橙色阳光(1122@hizhou.cn)",
+  "license": "GIT",
+  "dependencies": {
+    "superagent": "^2.3.0",
+    "superagent-charset": "^1.1.1"
+  }
+}
