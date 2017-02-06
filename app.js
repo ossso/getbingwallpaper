@@ -1,4 +1,5 @@
 var superagent = require('superagent');
+var urlUtil = require('./files').urlUtil();
 var files = require('./files').files;
 var ini = require('./config/ini').ini;
 
@@ -59,8 +60,9 @@ GetWallpaper.prototype.start = function() {
 GetWallpaper.prototype.format = function() {
     var list = this.data.json.images;
     for (var i = 0, n = list.length; i < n; i++) {
+        var _url = urlUtil.handler(ini.bingUrl,list[i].url);
         var _item = {
-            'url': list[i].url,
+            'url': _url,
             'date': list[i].enddate,
             'status': true
         };
